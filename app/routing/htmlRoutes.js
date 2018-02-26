@@ -30,6 +30,6 @@ module.exports = function (app) {
     // })
     //thus the star is a placeholder for the wild card - anything goes
     app.get("*", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/ho.html"));
+        res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 };
