@@ -5,8 +5,6 @@
 // ===============================================================================
 
 var friends = require("../data/friends");
-// var waitListData = require("../data/waitinglistData");
-
 
 // ===============================================================================
 // ROUTING
@@ -23,20 +21,11 @@ module.exports = function (app) {
         res.json(friends);
     });
 
-    // app.get("/api/waitlist", function (req, res) {
-    //     res.json(waitListData);
-    // });
 
-    // API POST Requests
-    // Below code handles when a user submits a form and thus submits data to the server.
-    // In each of the below cases, when a user submits form data (a JSON object)
-    // ...the JSON is pushed to the appropriate JavaScript array
-    // (ex. User fills out a reservation request... this data is then sent to the server...
-    // Then the server saves the data to the tableData array)
     // ---------------------------------------------------------------------------
 
     app.post("/api/friends", function (req, res) {
-        // Parse new friend input to get integers (AJAX post seemed to make the numbers strings)
+        // Parse new friend input to get integers 
         var newFriend = {
             name: req.body.name,
             photo: req.body.photo,
@@ -49,11 +38,11 @@ module.exports = function (app) {
         newFriend.scores = scoresArray;
 
 
-        // Cross check the new friend entry with the existing ones
+        // Check the new friend entry with the existing ones
         var scoreComparisionArray = [];
         for (var i = 0; i < friends.length; i++) {
 
-            // Check each friend's scores and sum difference in points
+            // Check each friend's scores and the sum difference in points
             var currentComparison = 0;
             for (var j = 0; j < newFriend.scores.length; j++) {
                 currentComparison += Math.abs(newFriend.scores[j] - friends[i].scores[j]);
@@ -63,7 +52,7 @@ module.exports = function (app) {
             scoreComparisionArray.push(currentComparison);
         }
 
-        // Determine the best match using the postion of best match in the friendsData array
+        // Find the best match using the postion of best match in the friends array
         var bestMatchPosition = 0; // assume its the first person to start
         for (var i = 1; i < scoreComparisionArray.length; i++) {
 
@@ -96,7 +85,7 @@ module.exports = function (app) {
 
 //     app.post("/api/clear", function () {
 //         // Empty out the arrays of data
-//         tableData = [];
-//         // console.log(tableData);
+//         friends = [];
+//         // console.log(friends);
 //     });
 // };

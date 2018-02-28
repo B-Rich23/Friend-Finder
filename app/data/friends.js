@@ -35,6 +35,22 @@ var friendsArray = [{
         4,
         1
     ]
+    },
+    {
+     "name": "Puss in Boots",
+        "photo": "https://vignette.wikia.nocookie.net/shrek/images/9/9c/PussInBootsTransparent.png/revision/latest?cb=20171218193006",
+        "scores": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+        ]   
     }];
 
 // Note how we export the array. This makes it accessible to other files using require.
