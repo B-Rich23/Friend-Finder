@@ -29,7 +29,7 @@ module.exports = function (app) {
     //   res.send('ab*cd')
     // })
     //thus the star is a placeholder for the wild card - anything goes
-    app.get("*", function (req, res) {
+    app.get("/*", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 };

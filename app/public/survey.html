@@ -1,431 +1,384 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>FriendFinder</title>
-
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    <!-- Tab Title -->
+    <title>Friend Finder | Survey</title>
+    <!-- Link in a tab icon, cuz why not -->
+    <!-- <link rel="icon" href="http://www.freeiconspng.com/uploads/burn-burning-fire-flame-heat-icon--icon-search-engine-20.png"> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
 
     <!-- Font Awesome Glyphicons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-    <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 
 </head>
+
 
 <body>
 
     <div class="container">
 
-        <h2>Survey Questions</h2>
-        <hr>
 
-        <h3>
-            <strong>About You</strong>
-        </h3>
-        <h4>Name (Required)</h4>
-        <input type="text" name="" id="name" class="form-control" required="">
-
-        <h4>Link to Photo Image (Required)</h4>
-        <input type="text" name="" id="photo" class="form-control" required="">
-
-        <hr>
-
-        <h3>
-            <strong>Question 1</strong>
-        </h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-        <select data-placeholder="" class="chosen-select" id="q1" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q1_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
+        <!-- Quiz Page Title -->
+        <div class="page-header">
+            <h1 style="font-size: 45px;">
+                <i class="fab fa-searchengin" aria-hidden="true" style="color: #d9534f;"></i> Friend Finder Quiz</h1>
         </div>
 
-        <h3>
-            <strong>Question 2</strong>
-        </h3>
-        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-        <select data-placeholder="" class="chosen-select" id="q2" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q2_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
+
+        <!-- User Name and Photo Panel -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <strong>About You</strong>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <h4>Your Full Name</h4>
+                <div class="input-group">
+                    <input id="formName" class="form-control" type="text" name="name" placeholder="John Smith">
+                    <span class="input-group-addon">(Required)</span>
                 </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
+                <br>
+                <h4>Link to a Photo Image</h4>
+                <div class="input-group">
+                    <input id="formImage" class="form-control" type="text" name="name" placeholder="http://yourphotolink.com.jpg/">
+                    <span class="input-group-addon">(Required)</span>
                 </div>
-                <ul class="chosen-results"></ul>
             </div>
         </div>
 
 
-        <h3>
-            <strong>Question 3</strong>
-        </h3>
-        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-        <select data-placeholder="" class="chosen-select" id="q3" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q3_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
+        <!-- Quiz Page Questions Panel -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <strong>Questionnaire</strong>
+                </h3>
+            </div>
+            <div class="panel-body">
+
+                <!-- Q1 -->
+                <h4>
+                    <strong>Question 1</strong>
+                </h4>
+                <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q1">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q2 -->
+                <h4>
+                    <strong>Question 2</strong>
+                </h4>
+                <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q2">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q3 -->
+                <h4>
+                    <strong>Question 3</strong>
+                </h4>
+                <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q3">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q4 -->
+                <h4>
+                    <strong>Question 4</strong>
+                </h4>
+                <h5>You rarely do something just out of sheer curiosity.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q4">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q5 -->
+                <h4>
+                    <strong>Question 5</strong>
+                </h4>
+                <h5>People can rarely upset you.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q5">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q6 -->
+                <h4>
+                    <strong>Question 6</strong>
+                </h4>
+                <h5>It is often difficult for you to relate to other people’s feelings.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q6">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q7 -->
+                <h4>
+                    <strong>Question 7</strong>
+                </h4>
+                <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q7">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q8 -->
+                <h4>
+                    <strong>Question 8</strong>
+                </h4>
+                <h5>You rarely get carried away by fantasies and ideas.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q8">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q9 -->
+                <h4>
+                    <strong>Question 9</strong>
+                </h4>
+                <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q9">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
+                <!-- Q10 -->
+                <h4>
+                    <strong>Question 10</strong>
+                </h4>
+                <h5>You feel more energetic after spending time with a group of people.</h5>
+                <select data-placeholder="" class="chosen-select" id="Q10">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+
             </div>
         </div>
 
 
-        <h3>
-            <strong>Question 4</strong>
-        </h3>
-        <h4>You rarely do something just out of sheer curiosity.</h4>
-        <select data-placeholder="" class="chosen-select" id="q4" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q4_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3>
-            <strong>Question 5</strong>
-        </h3>
-        <h4>People can rarely upset you.</h4>
-        <select data-placeholder="" class="chosen-select" id="q5" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q5_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3>
-            <strong>Question 6</strong>
-        </h3>
-        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
-        <select data-placeholder="" class="chosen-select" id="q6" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q6_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-
-        <h3>
-            <strong>Question 7</strong>
-        </h3>
-        <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-        <select data-placeholder="" class="chosen-select" id="q7" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q7_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-        <h3>
-            <strong>Question 8</strong>
-        </h3>
-        <h4>You rarely get carried away by fantasies and ideas.</h4>
-        <select data-placeholder="" class="chosen-select" id="q8" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q8_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-        <h3>
-            <strong>Question 9</strong>
-        </h3>
-        <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-        <select data-placeholder="" class="chosen-select" id="q9" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q9_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
-
-        <h3>
-            <strong>Question 10</strong>
-        </h3>
-        <h4>You feel more energetic after spending time with a group of people.</h4>
-        <select data-placeholder="" class="chosen-select" id="q10" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-        <div class="chosen-container chosen-container-single" style="width: 155px;" title="" id="q10_chosen">
-            <a class="chosen-single chosen-default">
-                <span>Select an Option</span>
-                <div>
-                    <b></b>
-                </div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search">
-                    <input type="text" autocomplete="off">
-                </div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div>
+        <!-- Quiz Submit Button -->
+        <button id="submitButton" type="submit" class="btn btn-md btn-danger btn-block">
+            <h4>
+                <span class="glyphicon glyphicon-send"></span> Submit</h4>
+        </button>
 
         <br>
-        <br>
 
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-            <i class="fa fa-check-circle" aria-hidden="true"></i>
-            Submit</button>
-
-        <hr>
+        <!-- Webpage Footer -->
         <footer class="footer">
-            <div class="container">
-                <p>
-                    <a href="/api/friends">API Friends List</a> |
-                    <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a>
-                </p>
-            </div>
+            <p>
+                <a class="text-danger" href="/api/friends">API Friends List</a> |
+                <a class="text-danger" href="https://github.com/B-Rich23/Friend-Finder" target="_blank">GitHub Repo</a> |
+                <a class="text-danger" href="/">Home</a>
+            </p>
         </footer>
 
-    </div>
 
-    <!-- Modal -->
-    <div id="resultsModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <!-- Match Modal -->
+        <div id="resultsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h2 class="modal-title">
-                        <strong>Best Match</strong>
-                    </h2>
+                <!-- Modal Content-->
+                <div class="modal-content">
+
+                    <!-- "X" Button to close the modal -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">
+                            <strong>Meet Your New Friend!</strong>
+                        </h2>
+                    </div>
+
+                    <!-- Modal Body (For Match Info) -->
+                    <div class="modal-body">
+                        <h2 id="matchName"></h2>
+                        <img id="matchImg" src="" alt="Image Not Found" style="max-width: 350px;">
+                    </div>
+
+                    <!-- Modal Footer (Close Button) -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
                 </div>
-                <div class="modal-body">
-                    <h2 id="matchName"></h2>
-                    <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+
             </div>
-
         </div>
+
+
     </div>
 
-    <script type="text/javascript">
 
-        // Chosen CSS
-        var config = {
-            '.chosen-select': {},
-            '.chosen-select-deselect': { allow_single_deselect: true },
-            '.chosen-select-no-single': { disable_search_threshold: 10 },
-            '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
-            '.chosen-select-width': { width: "95%" }
-        }
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
+    <!-- Link in jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
 
-        // Capture the form inputs 
-        $("#submit").on("click", function () {
 
-            // Form validation
-            function validateForm() {
-                var isValid = true;
-                $('.form-control').each(function () {
-                    if ($(this).val() === '')
-                        isValid = false;
-                });
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
-                $('.chosen-select').each(function () {
 
-                    if ($(this).val() === "")
-                        isValid = false
-                })
-                return isValid;
-            }
+    <!-- Additional JavaScript -->
+    <script>
 
-            // If all required fields are filled
-            if (validateForm() == true) {
-                // Create an object for the user's data
-                var userData = {
-                    name: $("#name").val(),
-                    photo: $("#photo").val(),
-                    scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+        // Global Variable
+        var allFieldsCompleted;
+
+        $(document).ready(function () {
+
+            // Event Listener for Submission
+            $('#submitButton').on('click', function () {
+
+                // Check if all the user fields are completed
+                checkIfComplete(function () {
+
+                    // Proceed with AJAX call if all questions are answered
+                    if (allFieldsCompleted == true) {
+                        collectInputs();
+                    }
+                    else {
+                        alert('Please complete all fields before submitting!');
+                    }
+
+                }); // end checkIfComplete() callback
+                
+                    event.preventDefault();
+
+            }); // end submit listener
+
+        }); // document ready
+
+
+        // Function to validate user input
+        function checkIfComplete(callback) {
+
+            // Iterate through all of class "chosen-select")
+            var questionsCompleted;
+            $('.chosen-select').each(function () {
+                if ($(this).val() == "") {
+                    questionsCompleted = false;
                 }
+            })
 
+                // This counters the async behavior of $.each()
+                .promise().done(function () {
 
-                // Grab the URL of the website
-                var currentURL = window.location.origin;
+                    // Check if any questions are incomplete
+                    if (questionsCompleted == false) {
+                        allFieldsCompleted = false;
+                    }
 
-                // AJAX post the data to the friends API. 
-                $.post(currentURL + "/api/friends", userData, function (data) {
+                    // Determine if Name is entered
+                    else if ($('#formName').val().trim() == "") {
+                        allFieldsCompleted = false;
+                    }
 
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#matchName").text(data.name);
-                    $('#matchImg').attr("src", data.photo);
+                    // Determine if Link is entered
+                    else if ($('#formImage').val().trim() == "") {
+                        allFieldsCompleted = false;
+                    }
 
-                    // Show the modal with the best match 
-                    $("#resultsModal").modal('toggle');
+                    // Otherwise, the all fields are completed
+                    else {
+                        allFieldsCompleted = true;
+                    }
+
+                    // Fire Off Callback (to counter async behavior of $.each)
+                    callback();
 
                 });
-            }
-            else {
-                alert("Please fill out all fields before submitting!");
-            }
+        }
 
-            return false;
-        });
 
+        function collectInputs() {
+
+            // Make new friend object
+            var newFriend = {
+                name: $('#formName').val().trim(),
+                photo: $('#formImage').val().trim(),
+                scores: parseInt([]),
+            };
+
+            // Loop through Questions to get scores
+            var scoresArray = [];
+            $('.chosen-select').each(function () {
+                var parVal = parseInt($(this).val());
+                scoresArray.push(parVal);
+            })
+                // This counters the async behavior of $.each()
+                .promise().done(function () {
+
+                    // Push the array of scores to the new friend object
+                    newFriend.scores = scoresArray;
+                    console.log(scoresArray);
+
+                    // POST the newFriend to the friends.js file and get back the best match
+                    var currentURL = window.location.origin;
+                    $.post(currentURL + "/api/friends", newFriend, function (data) {
+
+                        // Add Best Match attributes to Modal
+                        $('#matchName').text(data.name);
+                        $('#matchImg').attr('src', data.photo);
+
+                        // Show the modal with the best match 
+                        $("#resultsModal").modal('toggle');
+
+                    }); // end AJAX POST
+
+                });
+
+        }
 
     </script>
-
 
 </body>
 
